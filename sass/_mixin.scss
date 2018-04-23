@@ -1,0 +1,69 @@
+@mixin rows($bgColor , $wSize){
+	background: $bgColor;
+	width: $wSize;
+	height: auto;
+	display: flex;
+	flex-direction: column;
+}
+
+@mixin btnStyle{
+		background-color: $lightGreen;
+		border-radius: 3rem;
+		border: 0;
+		cursor: pointer;
+		display: inline-block;
+		font-weight: 700;
+		line-height: 3rem;
+		min-width: 3rem;
+		text-transform: uppercase;
+		margin: 0;
+		padding: 0 2rem;
+		text-align: center;
+		text-decoration: none;
+}
+
+@mixin graphContent($wSize){
+	width: $wSize;
+	height: auto;
+	margin: 1%;
+	display: flex;
+}
+
+@mixin graph($wSize , $bgColor){
+	width: $wSize;
+	height: 100%;
+	background: $bgColor;
+	margin: 1%;
+}
+
+@mixin menu($hSize){
+	display: flex;
+	margin: 10px 0px;
+	align-items: center;
+	height: $hSize;
+	list-style: none;
+	cursor: pointer;
+	padding: 0 5%;
+}
+
+@mixin flexboxCenter{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+@mixin btnRounded($wSize , $hSize){
+	width: $wSize;
+	height: $hSize;
+    color: #fff;
+    background: $darkBlue;
+    cursor: pointer;
+}
+
+@mixin imgStyle{
+	margin-right: 15px;
+    float: left;
+    height: 50px;
+    width: 50px;
+}
+

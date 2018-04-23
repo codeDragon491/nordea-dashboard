@@ -1,0 +1,1175 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Nordea Market Dashboard</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+
+	<div class="container">
+		<div class="sidebar">
+			<div class="logo">
+				<h1 class="sLogo">Nordea</h1>
+				<h3 class="sLogo">MARKETS</h3>
+			</div>
+			<div id="navProfile" class="profileMenu">
+				<img id="updateProfileImage" alt="UserImage" src="img/profile-picture.jpg">
+				<div id="btnChangeProfileImage">Change Photo</div>
+				<div class="menu-settings">
+					<ul>
+						<li id="menuSettings" class="displayPage" data-page="pageSettings">Personal Settings</li>
+						<li class="displayPage" data-page="pageTasks">Tasks</li>
+						<li class="displayPage" data-page="pageFavorites">Favorites</li>
+						<li class="displayPage" data-page="pageMessages">Direct Messages</li>
+						<li class="displayPage" data-page="pageNotifications">Notifications</li>
+					</ul>
+				</div>
+			</div>
+			<div id="navMain" class="searchBar">
+				<input class="txtSearchBar" type="text" placeholder="Search for Articles or Authors">
+				<div class="filter">
+					<select>
+						<option>Year</option>
+						<option>2017</option>
+						<option>2016</option>
+						<option>2015</option>
+					</select>
+					<select>
+						<option>Category</option>
+						<option>NORDIC & BALTIC ECONOMIES</option>
+						<option>MAJOR ECONOMIES</option>
+					</select>
+				</div>
+				<button id="btnSearch" class="displayPage" type="button" data-page="pageSearchResults">Search</button>
+				<div class="menu">
+					<ul>
+						<li id="menuHome" class="displayPage active" data-page="pageHome" data-subMenu="subMenuHome">Overview</li>
+						<ul id="subMenuHome" class="showMenu">
+							<li><a href="#homeCAVisitor">Active visitors</a></li>
+							<li><a href="#homeCRT">Click rate</a></li>
+							<li><a href="#homeRecentArticle">Most recent articles</a></li>
+							<li><a href="#homeSession">Sessions</a></li>
+							<li><a href="#homeSubscribers">Subscribers</a></li>
+							<li><a href="#homeTOV">Time of visits</a></li>
+							<li><a href="#homeTSK">Top search keywords</a></li>
+						</ul>
+						<li class="displayPage" data-page="pageMarket" data-subMenu="subMenuMarket">Analyze Website</li>
+						<ul id="subMenuMarket">
+							<li><a href="#marketCRT">Click rate</a></li>
+							<li><a href="#marketPageSession">Pages / Session</a></li>
+							<li><a href="#marketPageview">Pageviews</a></li>
+							<li><a href="#marketSession">Sessions</a></li>
+							<li><a href="#marketSesDuration">Session duration</a></li>
+							<li><a href="#marketSubscribers">Subscribers</a></li>
+							<li><a href="#marketTOV">Time of visits</a></li>
+							<li><a href="#marketTopPages">Top pages</a></li>
+							<li><a href="#marketTrafficSource">Traffic sources</a></li>
+						</ul>
+						<li class="displayPage" data-page="pageArticle" data-subMenu="subMenuArticle">Analyze Articles</li>
+						<ul id="subMenuArticle">
+							<li><a href="#articleArtCountries">Article countries</a></li>
+							<li><a href="#articlePosted">Article posted</a></li>
+							<li><a href="#articleReadership">Articles readership</a></li>
+							<li><a href="#articleRecentArticle">Most recent articles</a></li>
+							<li><a href="#articleTopAuthor">Top followed authors</a></li>
+							<li><a href="#articleTopRead">Top read articles</a></li>
+							<li><a href="#articleTSK">Top search keywords</a></li>
+						</ul>
+					</ul>
+				</div>
+			</div>
+		</div>
+	
+		<div class="content">
+			<div class="loginDiv">
+				<div class="top">
+					<div class="titleContainer">
+						<div id="navBack">
+							
+						</div>
+						<h1 id="pageTitle">Overview</h1>
+					</div>
+				</div>
+				<div class="top">
+					<button class="btnLogout" type="button"><a href="login.html">Logout</a></button>
+					<img id="btnProfileSettings" src="img/settings.svg" alt="settings-icon">
+				</div>
+			</div>
+
+			<!-- Page Home --> 
+			<div id="pageHome" class="content page showPage">
+				<!-- section 1 --> 
+				<div class="graphContainer">
+					<div class="graphContent3">
+						<div id="homeSession" class="graph">
+							<div class="wrapperTop">
+								<h4 class="graphTitle sTitleHome"></h4>
+								<select id="selectGraphVisit" class="visitorSelect" data-id="selectGraphVisit">
+									<option class="sOption" value="year">Year</option>
+									<option class="sOption" value="month">Month</option>
+									<option class="sOption" value="week">Week</option>
+									<option class="sOption" value="day" selected>Day</option>
+								</select>
+							</div>
+							<canvas id="graphHome1" class="graphCanvas"></canvas>
+						</div>
+					</div>
+					<div class="graphContent1">
+						<div id="homeCAVisitor" class="graph recentArticle">
+							<div class="wrapperTop">
+								<h4 class="graphTitle sTitleHome"></h4>
+							</div>
+							<div class="currentVisitorRow">
+								<div class="currentVisitorContent">
+									<div class="curActiveVisitor">
+										<div class="curActive">
+											<div>
+												<p class="curActiveHead">Active visitors</p>
+												<h1>
+													376
+												</h1>
+											</div>
+										</div>
+									</div>
+									<div class="curActiveVisitor">
+										<div class="curActive">
+											<div>
+												<p class="curActiveHead">New visitors</p>
+												<h2>
+													53
+												</h2>
+											</div>
+										</div>
+									</div>
+									<div class="curActiveVisitor">
+										<div class="curActive">
+											<div>
+												<p class="curActiveHead">Returning visitors</p>
+												<h2>
+													323
+												</h2>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- section 2 --> 
+				<div class="graphContainer">
+					<div class="graphContent2">
+						<div id="homeRecentArticle" class="graph2 recentArticle">
+							<div class="wrapperTop">
+								<h4 class="graphTitle sTitleHome"></h4>	
+							</div>
+							<table class="tableRecent">
+								<tbody>
+									<td>
+										GBP: Risiko for turbulent periode frem mod EU-topmøde i december
+										<p>
+											Date: 31-10-2017
+										</p>
+									</td>
+								</tbody>
+							</table>
+							<table class="tableRecent">
+								<tbody>
+									<td>
+										Navigator: Giver lave risikopræmier en falsk tryghed?
+										<p>
+											Date: 28-10-2017
+										</p>
+									</td>
+								</tbody>
+							</table>
+							<table class="tableRecent">
+								<tbody>
+									<td>
+										Norway: Stronger housing prices than expected
+										<p>
+											Date: 27-10-2017
+										</p>
+									</td>
+								</tbody>
+							</table>
+							<div class="viewMore">
+								<p class="sViewMore">
+									View more
+								</p>
+							</div>
+							
+						</div>
+						<div id="homeCRT" class="graph2">
+							<div class="wrapperTop">
+								<h4 class="graphTitle sTitleHome"></h4>
+								<select id="selectHomeCRT" class="crtSelect" data-id="selectHomeCRT">
+									<option class="sOption" value="year">Year</option>
+									<option class="sOption" value="month">Month</option>
+									<option class="sOption" value="week" selected>Week</option>
+									<option class="sOption" value="day">Day</option>
+								</select>
+							</div>
+							<div id="crtHomeContents">
+								<div class="crtThisWeek">
+									<div class="crtContent">
+										<div>
+											<p class="crtHead">This Week</p>
+											<h1>
+												1376
+											</h1>
+										</div>
+										<div>
+											<p>Average CRT / Visitor:</p>
+											<h2>33</h2>
+										</div>
+									</div>
+								</div>
+								<div class="crtLastWeek">
+									<div class="crtContent">
+										<div>
+											<p class="crtHead">Last Week</p>
+											<h2>
+												1076
+											</h2>
+										</div>
+										<div>
+											<p>Average CRT / Visitor:</p>
+											<h3>33</h3>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="graphContent2">
+						<div id="homeSubscribers" class="graph">
+							<div class="wrapperTop">
+								<h4 class="graphTitle sTitleHome"></h4>
+								<select id="selectGraphSub" class="subSelect" data-id="selectGraphSub">
+									<option class="sOption" value="year">Year</option>
+									<option class="sOption" value="month" selected>Month</option>
+									<option class="sOption" value="week">Week</option>
+									<option class="sOption" value="day">Day</option>
+								</select>
+							</div>
+							<canvas id="graphHome3"></canvas>
+						</div>
+					</div>
+				</div>
+
+				<!-- section 3 --> 
+				<div class="graphContainer">
+					<div class="graphContent2">
+						<div id="homeTOV" class="graph">
+							<div class="wrapperTop">
+								<h4 class="graphTitle sTitleHome"></h4>
+								<select id="selectGraphTOV" class="tovSelect" data-id="selectGraphTOV">
+									<option class="sOption" value="year">Year</option>
+									<option class="sOption" value="month">Month</option>
+									<option class="sOption" value="week" selected>Week</option>
+									<option class="sOption" value="day">Day</option>
+								</select>
+							</div>
+							<p class="subTitle">Showing in %</p>
+							<canvas id="graphHome4"></canvas>
+						</div>
+					</div>
+					<div class="graphContent2">
+						<div id="homeTSK" class="graph">
+							<div class="wrapperTop">
+								<h4 class="graphTitle sTitleHome"></h4>
+							</div>
+							<div class="contentWrapper">
+								<div class="searchRow">
+									<div class="topSearchContent">
+										<h3>1) Brexit</h3>
+										<p>1205 searches</p>
+									</div>
+									<div class="topSearchContent">
+										<h3>2) German election</h3>
+										<p>1005 searches</p>
+									</div>
+									<div class="topSearchContent">
+										<h3>3) US economies</h3>
+										<p>905 searches</p>
+									</div>
+									<div class="topSearchContent">
+										<h3>4) China</h3>
+										<p>826 searches</p>
+									</div>
+									<div class="topSearchContent">
+										<h3>5) Norway economy</h3>
+										<p>798 searches</p>
+									</div>
+								</div>
+								<div class="searchRow">
+									<div class="topSearchContent">
+										<h3>6) French election</h3>
+										<p>790 searches</p>
+									</div>
+									<div class="topSearchContent">
+										<h3>7) Carlsberg</h3>
+										<p>505 searches</p>
+									</div>
+									<div class="topSearchContent">
+										<h3>8) Investing</h3>
+										<p>494 searches</p>
+									</div>
+									<div class="topSearchContent">
+										<h3>9) IFRS 16</h3>
+										<p>485 searches</p>
+									</div>
+									<div class="topSearchContent">
+										<h3>10) Nordea</h3>
+										<p>467 searches</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		
+			<!-- Page Market --> 
+			<div id="pageMarket" class="content page">
+				<!-- section 1 --> 
+				<div class="graphContainer">
+					<div class="graphContent4">
+						<div id="marketSession" class="graph">
+							<div class="wrapperTop">
+								<h4 class="graphTitle sTitleWebsite"></h4>
+								<select id="marketVisitorSelect" class="visitorSelect" data-id="marketVisitorSelect">
+									<option class="sOption" value="year">Year</option>
+									<option class="sOption" value="month">Month</option>
+									<option class="sOption" value="week">Week</option>
+									<option class="sOption" value="day" selected>Day</option>
+								</select>
+							</div>
+							<canvas id="graphMarket1" class="graphCanvas"></canvas>
+						</div>
+					</div>
+				</div>
+
+				<!-- section 2 --> 
+				<div class="graphContainer">
+					<div class="graphContent2">
+						<div id="marketPageview" class="graph">
+							<div class="wrapperTop">
+								<h4 class="graphTitle sTitleWebsite"></h4>
+								<select id="marketPVSelect" class="pvSelect" data-id="marketPVSelect">
+									<option class="sOption" value="year">Year</option>
+									<option class="sOption" value="month">Month</option>
+									<option class="sOption" value="week">Week</option>
+									<option class="sOption" value="day" selected>Day</option>
+								</select>
+							</div>
+							<canvas id="graphMarket2"></canvas>
+						</div>
+					</div>
+					<div class="graphContent2">
+						<div id="marketSesDuration" class="graph2">
+							<div class="wrapperTop">
+								<h4 class="graphTitle sTitleWebsite"></h4>
+								<select id="marketPDSelect" class="PDSelect" data-id="marketPDSelect">
+									<option class="sOption" value="year">Year</option>
+									<option class="sOption" value="month">Month</option>
+									<option class="sOption" value="week" selected>Week</option>
+									<option class="sOption" value="day">Day</option>
+								</select>
+							</div>
+							<canvas id="graphMarket3"></canvas>						
+						</div>
+						<div id="marketPageSession" class="graph2">
+							<div class="wrapperTop">
+								<h4 class="graphTitle sTitleWebsite"></h4>
+								<select id="marketPSSelect" class="PSSelect" data-id="marketPSSelect">
+									<option class="sOption" value="year">Year</option>
+									<option class="sOption" value="month">Month</option>
+									<option class="sOption" value="week" selected>Week</option>
+									<option class="sOption" value="day">Day</option>
+								</select>
+							</div>
+							<canvas id="graphMarket4"></canvas>	
+						</div>
+					</div>
+				</div>
+					
+				<!-- section 3 --> 
+				<div class="graphContainer">
+					<div class="graphContent2">
+						<div id="marketTopPages" class="graph">
+							<div class="wrapperTop">
+								<h4 class="graphTitle sTitleWebsite"></h4>
+							</div>
+							<div class="topPagesRow">
+								<div class="topPagesContent">
+									<h3>1) Customer stories</h3>
+									<p>790 visits</p>
+								</div>
+								<div class="topPagesContent">
+									<h3>2) Research</h3>
+									<p>505 visits</p>
+								</div>
+								<div class="topPagesContent">
+									<h3>3) Podcasts</h3>
+									<p>494 visits</p>
+								</div>
+								<div class="topPagesContent">
+									<h3>4) Insights</h3>
+									<p>385 visits</p>
+								</div>
+								<div class="topPagesContent">
+									<h3>5) Our service</h3>
+									<p>367 visits</p>
+								</div>
+							</div>
+							<div class="viewMore">
+								<p class="sViewMore">
+									View more
+								</p>
+							</div>
+						</div>
+						<div id="marketCRT" class="graph">
+							<div class="wrapperTop">
+								<h4 class="graphTitle sTitleWebsite"></h4>
+								<select id="selectMarketCRT" class="crtSelect" data-id="selectMarketCRT">
+									<option class="sOption" value="year">Year</option>
+									<option class="sOption" value="month">Month</option>
+									<option class="sOption" value="week" selected>Week</option>
+									<option class="sOption" value="day">Day</option>
+								</select>
+							</div>
+							<div id="crtMarketContents">
+								<div id="crtMarketContent">
+									<div class="crtThisWeek">
+										<div class="crtContent">
+											<div>
+												<p class="crtHead">This Week</p>
+												<h1>
+													1376
+												</h1>
+											</div>
+											<div>
+												<p>Average CRT / Visitor:</p>
+												<h2>33</h2>
+											</div>
+										</div>
+									</div>
+									<div class="crtLastWeek">
+										<div class="crtContent">
+											<div>
+												<p class="crtHead">Last Week</p>
+												<h2>
+													1076
+												</h2>
+											</div>
+											<div>
+												<p>Average CRT / Visitor:</p>
+												<h3>33</h3>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="graphContent2">
+						<div id="marketTOV" class="graph">
+							<div class="wrapperTop">
+								<h4 class="graphTitle sTitleWebsite"></h4>
+								<select id="selectMarketTOV" class="tovSelect" data-id="selectMarketTOV">
+									<option class="sOption" value="year">Year</option>
+									<option class="sOption" value="month">Month</option>
+									<option class="sOption" value="week" selected>Week</option>
+									<option class="sOption" value="day">Day</option>
+								</select>
+							</div>
+							<canvas id="graphMarket5"></canvas>
+						</div>
+					</div>
+				</div>
+
+				<!-- section 4 --> 
+				<div class="graphContainer">
+					<div class="graphContent2">
+						<div id="marketTrafficSource" class="graph">
+							<div class="wrapperTop">
+								<h4 class="graphTitle sTitleWebsite"></h4>
+								<select id="selectMarketTS" class="tsSelect" data-id="selectMarketTS">
+									<option class="sOption" value="year">Year</option>
+									<option class="sOption" value="month" selected>Month</option>
+									<option class="sOption" value="week">Week</option>
+									<option class="sOption" value="day">Day</option>
+								</select>
+							</div>
+							<canvas id="graphMarket6"></canvas>
+						</div>
+					</div>
+					<div class="graphContent2">
+						<div id="marketSubscribers" class="graph">
+							<div class="wrapperTop">
+								<h4 class="graphTitle sTitleWebsite"></h4>
+								<select id="selectMarketSub" class="subSelect" data-id="selectMarketSub">
+									<option class="sOption" value="year">Year</option>
+									<option class="sOption" value="month" selected>Month</option>
+									<option class="sOption" value="week">Week</option>
+									<option class="sOption" value="day">Day</option>
+								</select>
+							</div>
+							<canvas id="graphMarket7"></canvas>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- Page Article --> 
+			<div id="pageArticle" class="content page">
+				<!-- section 1 --> 
+				<div class="graphContainer">
+					<div class="graphContent3">
+						<div id="articlePosted" class="graph">
+							<div class="wrapperTop">
+								<h4 class="graphTitle sTitleArticle"></h4>
+								<select id="selectArticlePosted" class="apSelect" data-id="selectArticlePosted">
+									<option class="sOption" value="year">Year</option>
+									<option class="sOption" value="month">Month</option>
+									<option class="sOption" value="week">Week</option>
+									<option class="sOption" value="day" selected>Day</option>
+								</select>
+							</div>
+							<canvas id="graphArticle1"></canvas>
+						</div>
+					</div>
+					<div class="graphContent1">
+						<div id="articleTopAuthor" class="graph">
+							<div class="wrapperTop">
+								<h4 class="graphTitle sTitleArticle"></h4>
+							</div>
+							<div class="imgContainer">
+								<div class="imgContent">
+									<img src="img/martin.jpeg" alt="martin">
+									<div class="textContainer">
+										<h3>Martin Hansen</h3>
+										<p>1306 followers</p>
+									</div>
+								</div>
+								<div class="imgContent">
+									<img src="img/denis.jpeg" alt="martin">
+									<div class="textContainer">
+										<h3>Denis Madsen</h3>
+										<p>1268 followers</p>
+									</div>
+								</div>
+								<div class="imgContent">
+									<img src="img/marja.jpeg" alt="martin">
+									<div class="textContainer">
+										<h3>Marja Jensen</h3>
+										<p>1226 followers</p>
+									</div>
+								</div>
+								<div class="viewMore">
+									<p class="sViewMore">
+										View more
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- section 2 --> 
+				<div class="graphContainer">
+					<div class="graphContent2">
+						<div id="articleRecentArticle" class="graph2 recentArticle">
+							<div class="wrapperTop">
+								<h4 class="graphTitle sTitleArticle"></h4>
+							</div>
+							<table class="tableRecent">
+								<tbody>
+									<td>
+										GBP: Risiko for turbulent periode frem mod EU-topmøde i december
+										<p>
+											Date: 31-10-2017
+										</p>
+									</td>
+								</tbody>
+							</table>
+							<table class="tableRecent">
+								<tbody>
+									<td>
+										Navigator: Giver lave risikopræmier en falsk tryghed?
+										<p>
+											Date: 28-10-2017
+										</p>
+									</td>
+								</tbody>
+							</table>
+							<table class="tableRecent">
+								<tbody>
+									<td>
+										Norway: Stronger housing prices than expected
+										<p>
+											Date: 27-10-2017
+										</p>
+									</td>
+								</tbody>
+							</table>
+							<div class="viewMore">
+								<p class="sViewMore">
+									View more
+								</p>
+							</div>
+						</div>
+						<div id="articleTopRead" class="graph2">
+							<div class="wrapperTop">
+								<h4 class="graphTitle sTitleArticle"></h4>
+							</div>
+							<div class="topPagesRow">
+								<div class="topPagesContent">
+									<h3>1) German election – a complicated result</h3>
+									<p>1790 visits</p>
+								</div>
+								<div class="topPagesContent">
+									<h3>2)The death of dirty investing</h3>
+									<p>1505 visits</p>
+								</div>
+								<div class="topPagesContent">
+									<h3>3) Cash in the digital economy</h3>
+									<p>1494 visits</p>
+								</div>
+								<div class="topPagesContent">
+									<h3>4) AI and digital disruption</h3>
+									<p>1385 visits</p>
+								</div>
+								<div class="viewMore">
+									<p class="sViewMore">
+										View more
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="graphContent2">
+						<div id="articleArtCountries" class="graph">
+							<div class="wrapperTop">
+								<h4 class="graphTitle sTitleArticle"></h4>
+								<select id="selectArticleCountries" class="acSelect" data-id="selectArticleCountries">
+									<option class="sOption" value="year">Year</option>
+									<option class="sOption" value="month">Month</option>
+									<option class="sOption" value="week">Week</option>
+									<option class="sOption" value="day" selected>Day</option>
+								</select>
+							</div>
+							<canvas id="graphArticle2"></canvas>
+						</div>
+					</div>
+				</div>
+					
+				<!-- section 3 --> 
+				<div class="graphContainer">
+					<div class="graphContent2">
+						<div id="articleReadership" class="graph">
+							<div class="wrapperTop">
+								<h4 class="graphTitle sTitleArticle"></h4>
+								<select id="selectArticleRShip" class="arSelect" data-id="selectArticleRShip">
+									<option class="sOption" value="year">Year</option>
+									<option class="sOption" value="month">Month</option>
+									<option class="sOption" value="week" selected>Week</option>
+									<option class="sOption" value="day">Day</option>
+								</select>
+							</div>
+							<canvas id="graphArticle3"></canvas>
+						</div>
+					</div>
+					<div class="graphContent2">
+						<div id="articleTSK" class="graph">
+							<div class="wrapperTop">
+								<h4 class="graphTitle sTitleArticle"></h4>
+							</div>
+							<div class="contentWrapper">
+								<div class="searchRow">
+									<div class="topSearchContent">
+										<h3>1) Brexit</h3>
+										<p>1205 searches</p>
+									</div>
+									<div class="topSearchContent">
+										<h3>2) German election</h3>
+										<p>1005 searches</p>
+									</div>
+									<div class="topSearchContent">
+										<h3>3) US economies</h3>
+										<p>905 searches</p>
+									</div>
+									<div class="topSearchContent">
+										<h3>4) China</h3>
+										<p>826 searches</p>
+									</div>
+									<div class="topSearchContent">
+										<h3>5) Norway economy</h3>
+										<p>798 searches</p>
+									</div>
+								</div>
+								<div class="searchRow">
+									<div class="topSearchContent">
+										<h3>6) French election</h3>
+										<p>790 searches</p>
+									</div>
+									<div class="topSearchContent">
+										<h3>7) Carlsberg</h3>
+										<p>505 searches</p>
+									</div>
+									<div class="topSearchContent">
+										<h3>8) Investing</h3>
+										<p>494 searches</p>
+									</div>
+									<div class="topSearchContent">
+										<h3>9) IFRS 16</h3>
+										<p>485 searches</p>
+									</div>
+									<div class="topSearchContent">
+										<h3>10) Nordea</h3>
+										<p>467 searches</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- Page Search results --> 
+			<div id="pageSearchResults" class="content page">
+				<div class="graphContainer">
+					<!-- container - body content -->  
+					<div class="articlesContainer">
+						<!-- section 1 -->
+						<div class="articlesContent">
+							<img src="img/article.png" alt="article"> 
+							<h4>Article One</h4>
+							<p class="displayPage" data-page="pageSingleArticle">
+								Lorem ipsum dolor sit amet, consectetuer adipiscing elit. 
+								Aenean commodo ligula eget dolor. Aenean massa. Cum sociis 
+								natoque penatibus et magnis dis parturient montes
+							</p>
+						</div>
+						<!-- section 2 -->
+						<div class="articlesContent">
+							<img src="img/article.png" alt="article"> 
+							<h4>Article Two</h4>
+							<p class="displayPage" data-page="pageSingleArticle">
+								Lorem ipsum dolor sit amet, consectetuer adipiscing elit. 
+								Aenean commodo ligula eget dolor. Aenean massa. Cum sociis 
+								natoque penatibus et magnis dis parturient montes
+							</p>
+						</div>
+						<!-- section 3 -->
+						<div class="articlesContent">
+							<img src="img/article.png" alt="article"> 
+							<h4>Article Three</h4>
+							<p class="displayPage" data-page="pageSingleArticle">
+								Lorem ipsum dolor sit amet, consectetuer adipiscing elit. 
+								Aenean commodo ligula eget dolor. Aenean massa. Cum sociis 
+								natoque penatibus et magnis dis parturient montes
+							</p>
+						</div>
+						<!-- section 4 -->
+						<div class="articlesContent">
+							<img src="img/article.png" alt="article"> 
+							<h4>Article Four</h4>
+							<p class="displayPage" data-page="pageSingleArticle">
+								Lorem ipsum dolor sit amet, consectetuer adipiscing elit. 
+								Aenean commodo ligula eget dolor. Aenean massa. Cum sociis 
+								natoque penatibus et magnis dis parturient montes
+							</p>
+						</div>
+						<!-- section 5 -->
+						<div class="articlesContent">
+							<img src="img/article.png" alt="article"> 
+							<h4>Article Five</h4>
+							<p class="displayPage" data-page="pageSingleArticle">
+								Lorem ipsum dolor sit amet, consectetuer adipiscing elit. 
+								Aenean commodo ligula eget dolor. Aenean massa. Cum sociis 
+								natoque penatibus et magnis dis parturient montes
+							</p>
+						</div>
+						<!-- section 6 -->
+						<div class="articlesContent">
+							<img src="img/article.png" alt="article"> 
+							<h4>Article Six</h4>
+							<p class="displayPage" data-page="pageSingleArticle">
+								Lorem ipsum dolor sit amet, consectetuer adipiscing elit. 
+								Aenean commodo ligula eget dolor. Aenean massa. Cum sociis 
+								natoque penatibus et magnis dis parturient montes
+							</p>
+						</div>							
+					</div>
+				</div>
+			</div>
+
+			<!-- Page Single article --> 
+			<div id="pageSingleArticle" class="content page">
+				<div class="graphContainer">
+					<div class="graphContent1">
+						<div class="singleArticlesContent">
+							<h3>Article info</h3>
+								<p>Author: Denis Hansen</p>
+								<p>Published on: <i>21/03/2016</i></p>
+								<p>Time: <i>13:45</i></p>
+								<p>Location: <i>Copenhagen</i></p>
+							<br><br>
+							<h3>
+								Description
+							</h3>
+							<p>
+								Lorem ipsum dolor sit amet, consectetuer adipiscing elit. 
+								Aenean commodo ligula eget dolor. Aenean massa. Cum sociis 
+								natoque penatibus et magnis dis parturient montes
+							</p>
+						</div>
+					</div>
+					<div class="graphContent3">
+						<div class="graph">
+							<div class="wrapperTop">
+								<h4 class="graphTitle sTitleSingleAr">Article viewed</h4>
+							</div>
+							<canvas id="graphSingleAr1"></canvas>
+						</div>
+					</div>	
+				</div>
+
+				<div class="graphContainer">
+					<div class="graphContent2">
+						<div class="graph2">
+							<div class="wrapperTop">
+								<h4 class="graphTitle sTitleSingleAr">Avg Page / Duration</h4>
+							</div>
+							<canvas id="graphSingleAr2"></canvas>
+						</div>
+
+						<div class="graph2">
+							<div class="wrapperTop">
+								<h4 class="graphTitle sTitleSingleAr">Click rate</h4>
+							</div>
+							<div class="crtThisWeek">
+								<div class="crtContent">
+									<div>
+										<p class="crtHead">This Week</p>
+										<h1>
+											1376
+										</h1>
+									</div>
+									<div>
+										<p>Average CRT / Visitor:</p>
+										<h2>33</h2>
+									</div>
+								</div>
+							</div>
+							<div class="crtLastWeek">
+								<div class="crtContent">
+									<div>
+										<p class="crtHead">Last Week</p>
+										<h2>
+											1076
+										</h2>
+									</div>
+									<div>
+										<p>Average CRT / Visitor:</p>
+										<h3>33</h3>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="graphContent2">
+						<div class="graph">
+							<div class="wrapperTop">
+								<h4 class="graphTitle sTitleSingleAr">Traffic sources</h4>
+							</div>
+							<canvas id="graphSingleAr3"></canvas>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- Page ProfileSettings -->
+			<div id="pageSettings" class="profileContainer page">
+				<div class="profileContent">
+					<h4>Full name:</h4>
+					<input type="text" name="FullName" value="Terry Baynes">
+					<br>
+					<h4>Email:</h4>
+					<input type="text" name="Email" value="tb@nordeamarkets.com">
+					<br>
+					<h4>Phone-number:</h4>
+					<input type="num" name="Phonenumber" value="+4567550656">
+					<br>
+					<h4>Title:</h4>
+					<input type="text" name="Email" value="Chief Editor">
+					<br>
+					<h4>Bio:</h4>
+					<textarea rows="18" cols="50">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce quis lectus quis sem lacinia nonummy. Proin mollis lorem non dolor. In hac habitasse platea dictumst. Nulla ultrices odio. Donec augue. Phasellus dui. Maecenas facilisis nisl vitae nibh. Proin vel seo est vitae eros pretium dignissim. Aliquam aliquam sodales orci. Suspendisse potenti. Nunc adipiscing euismod arcu. Quisque facilisis mattis lacus. Fusce bibendum, velit in venenatis viverra, tellus ligula dignissim felis, quis euismod mauris tellus ut urna. Proin scelerisque. Nulla in mi. Integer ac leo. Nunc urna ligula, gravida a, pretium vitae, bibendum nec, ante. Aliquam ullamcorper iaculis lectus. Sed vel dui. Etiam lacinia risus vitae lacus. Aliquam elementum imperdiet turpis. In id metus. Mauris eu nisl. Nam pharetra nisi nec enim. Nulla aliquam, tellus sed laoreet blandit, eros urna vehicula lectus, et vulputate mauris arcu ut arcu. Praesent eros metus lirum larum, accumsan a, malesuada et, commodo vel, nulla. Aliquam sagittis auctor sapien. Morbi a nibh.</textarea>
+					<br>
+					<div class="bottom_wrapper-top">
+						<div class="send_message">
+							<div class="text">Save</div>
+						</div>
+					</div>
+					<br>
+				</div>
+			</div>
+
+			<!-- Page TasksSettings -->
+			<div id="pageTasks" class="profileContainer page">
+				<div class="tasksContent">
+					<h3 id="to-do">Terry's To-Do List</h3>
+					<div class="items">
+						<input class="task" id="item1" type="checkbox" checked>
+						<label for="item1">Create a to-do list</label>
+
+						<input class="task" id="item2" type="checkbox">
+						<label for="item2">Analyze recent articles</label>
+
+						<input class="task" id="item3" type="checkbox">
+						<label for="item3">Check out new authors</label>
+
+						<input class="task" id="item4" type="checkbox">
+						<label for="item4">Analyze visitors on the website</label>
+
+						<input class="task" id="item5" type="checkbox">
+						<label for="item5">Give feedback to authors</label>
+
+						<input class="task" id="item6" type="checkbox">
+						<label for="item6">Print out analysis results</label>
+
+						<h4 class="done" aria-hidden="true">Done</h4>
+						<h4 class="undone" aria-hidden="true">Not Done</h4>
+					</div>
+					<div class="bottom_wrapper">
+						<div class="message_input_wrapper">
+							<input class="message_input" placeholder="Add your task here..." autofocus>
+						</div>
+						<div class="send_message">
+							<div class="text">Add</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- Page FavoritesSettings -->
+			<div id="pageFavorites" class="profileContainer page">
+				<div class="favoritesContent">
+					<div class="table-responsive">
+						<table id="mytable" class="table table-bordred table-striped">
+							<thead class="tableCenter">
+								<th>Favorite Articles</th>
+							</thead>
+							<tbody id="lblFavorites">
+								<tr>
+									<td class="tableCenter">
+										<img src="img/article.png" alt="article"> 
+									</td>
+									<td>GBP: Risiko for turbulent periode frem mod EU-topmøde i december</td>
+									<td>
+										<p data-placement="top" data-toggle="tooltip" title="Delete">
+											<button class="btn btn-danger btn-xs" data-title="Delete" data-toggle="modal" data-target="#delete">
+												<i class="fa fa-trash-o" aria-hidden="true"></i>
+											</button>
+										</p>
+									</td>
+									</p>
+									</td>
+								</tr>
+								<tr>
+									<td class="tableCenter">
+										<img src="img/article.png" alt="article"> 
+									</td>
+									<td>Navigator: Giver lave risikopræmier en falsk tryghed?</td>
+									<td>
+										<p data-placement="top" data-toggle="tooltip" title="Delete">
+											<button class="btn btn-danger btn-xs" data-title="Delete" data-toggle="modal" data-target="#delete">
+												<i class="fa fa-trash-o" aria-hidden="true"></i>
+											</button>
+										</p>
+									</td>
+								</tr>
+								<tr>
+									<td class="tableCenter">
+										<img src="img/article.png" alt="article"> 
+									</td>
+									<td>Norway: Stronger housing prices than expected
+									</td>
+									<td>
+										<p data-placement="top" data-toggle="tooltip" title="Delete">
+											<button class="btn btn-danger btn-xs" data-title="Delete" data-toggle="modal" data-target="#delete">
+												<i class="fa fa-trash-o" aria-hidden="true"></i>
+											</button>
+										</p>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+
+			<!-- Page MessagesSettings -->
+			<div id="pageMessages" class="profileContainer page">
+				<div class="messagesContent">
+					<div class="top_menu">
+						<div class="buttons">
+							<div class="button close"></div>
+							<div class="button minimize"></div>
+							<div class="button maximize"></div>
+						</div>
+						<div class="title">Chat</div>
+					</div>
+					<ul class="messages"></ul>
+					<div class="bottom_wrapper">
+						<div class="message_input_wrapper">
+							<input class="message_input" placeholder="Type your message here..." autofocus>
+						</div>
+						<div class="send_message">
+							<div class="icon"></div>
+							<div class="text">Send</div>
+						</div>
+					</div>
+				</div>
+				<div class="message_template">
+					<li class="message">
+						<div class="avatar"></div>
+						<div class="text_wrapper">
+							<div class="text"></div>
+						</div>
+					</li>
+				</div>
+			</div>
+
+			<!-- Page NotificationsSettings -->
+			<div id="pageNotifications" class="profileContainer page">
+				<div class="notificationsContent">
+					<div class="table-responsive">
+						<table id="mytable" class="table table-bordred table-striped">
+							<thead>
+								<th>Default Email Notification Settings</th>
+							</thead>
+							<tbody id="lblNotifications">
+								<tr>
+									<td>Email Alert for new messages</td>
+									<td>On</td>
+									<td>
+										<p data-placement="top" data-toggle="tooltip" title="Edit">
+											<button class="btn btn-primary btn-xs" data-title="Edit" data-toggle="modal" data-target="#edit">
+												<span class="glyphicon glyphicon-pencil"></span>
+											</button>
+										</p>
+									</td>
+								</tr>
+								<tr>
+									<td>Email Alert for new visitors</td>
+									<td>Off</td>
+									<td>
+										<p data-placement="top" data-toggle="tooltip" title="Edit">
+											<button class="btn btn-primary btn-xs" data-title="Edit" data-toggle="modal" data-target="#edit">
+												<span class="glyphicon glyphicon-pencil"></span>
+											</button>
+										</p>
+									</td>
+								</tr>
+								<tr>
+									<td>Email Alert for new subscribers</td>
+									<td>Off</td>
+									<td>
+										<p data-placement="top" data-toggle="tooltip" title="Edit">
+											<button class="btn btn-primary btn-xs" data-title="Edit" data-toggle="modal" data-target="#edit">
+												<span class="glyphicon glyphicon-pencil"></span>
+											</button>
+										</p>
+									</td>
+								</tr>
+								<tr>
+									<td>Email Alert for newly published articles</td>
+									<td>On</td>
+									<td>
+										<p data-placement="top" data-toggle="tooltip" title="Edit">
+											<button class="btn btn-primary btn-xs" data-title="Edit" data-toggle="modal" data-target="#edit">
+												<span class="glyphicon glyphicon-pencil"></span>
+											</button>
+										</p>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+
+		</div>
+		
+		<!-- Page Graph Full Size --> 
+		<div id="openGraph" class="showGraph hideGraph">
+			<div class="canvasDiv">
+				<div class="fullTop">
+					<h1 class="sTitle">Sessions</h1>
+					<div class="divContentSave">
+						<button id="btnSave">Save as PDF</button>
+					</div>
+					<div class="close">X</div>
+				</div>
+				<canvas id="graphCanvas" class="graphCanvas"></canvas>
+				<table id="visitorTW" class="thisWeek table-responsiv">
+				</table>
+				<table id="visitorLW" class="lastWeek table-responsiv">
+				</table>
+			</div>
+		</div>
+	</div>
+
+<script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.0/Chart.min.js"></script>
+<script type="text/javascript" src="js/node_modules/chart.piecelabel.js/src/Chart.PieceLabel.js"></script>
+<script type="text/javascript" src="js/homeCharts.js"></script>
+<script type="text/javascript" src="js/marketCharts.js"></script>
+<script type="text/javascript" src="js/articleCharts.js"></script>
+<script type="text/javascript" src="js/filterGraphHome.js"></script>
+<script type="text/javascript" src="js/filterGraphMarket.js"></script>
+<script type="text/javascript" src="js/filterGraphArticle.js"></script>
+<script type="text/javascript" src="js/loadCharts.js"></script>
+<script type="text/javascript" src="js/changePage.js"></script>
+<script type="text/javascript" src="js/settings.js"></script>
+<script type="text/javascript" src="js/chatBox.js"></script>
+
+<script>
+	var aGraphHomeTitle = ["Sessions" , "Currently active visitors" , "Most recent articles" , "Click rate" , "Subscribers" , "Time of visits" , "Top search keywords"];
+	var aGraphMaketTitle = ["Sessions" , "Pageviews" , "Avg session duration" , "Pages / Session" , "Top pages" , "Click rate" , "Time of visits" , "Traffic sources" , "Subscribers"];
+	var aGraphArticleTitle = ["Article posted" , "Top followed authors" , "Most recent articles" , "Top read articles" , "Articles countries" , "Articles readership" , "Top search keywords"];
+
+	var sPageHomeTitle = document.getElementsByClassName("sTitleHome");
+	var sPageWebsiteTitle = document.getElementsByClassName("sTitleWebsite");
+	var sPageArticleTitle = document.getElementsByClassName("sTitleArticle");
+
+function addTitle(array , page){
+	for(var i = 0; i < array.length; i++){
+		page[i].innerHTML = array[i];
+	};
+};
+addTitle(aGraphHomeTitle , sPageHomeTitle);
+
+/////// Enlarge chart
+	document.addEventListener("click" , function(e){
+		if(e.target.classList.contains("graphCanvas")){
+			openGraph.classList.remove("hideGraph");
+			return;
+		};
+		if(e.target.classList.contains("close")){
+			openGraph.classList.add("hideGraph");
+			return;
+		};
+	})
+</script>
+
+
+</body>
+</html>
